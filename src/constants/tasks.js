@@ -4,16 +4,6 @@ export const tasks = [
     text: "$"
   },
   {
-    title: "Descripcion de me mama Laura",
-    text: `Mi personaje favorito es mi mamá, su nombre es Lauriana de Jesús Pinta.
-    Tiene cuar$ y ocho añ$ de ed$ y tra$ de prof$ en el cen$ educativo “Fiscal Francia” de ni$ .
-    Ella vi$ en Calvas c$ mi pa$ y mi her$ , a qui$ quiero y apr$ mucho.
-    A mi madre la adm$ porque e$ una per$ luchadora, respe$, solidaria, soci$ , etc.
-    Le gu$ el dep$ , en espe$ el basqu$ .
-    Está siempre ale$ , es m$ amorosa y comuni$ , y trata de darme y enseñarme lo mejor que tiene.
-    Los momentos que he compartido con ella han sido inolvidables. `
-  },
-  {
     title: "17 de agosto, Marbella",
     text: `Laura todavía está en la playa y yo estoy ya en la habitación del hotel. 
     No quiero sa$
@@ -28,6 +18,16 @@ export const tasks = [
     sobre to$ el pes$ ! 
     Por las tar$ vamos a$ centro de Marbella. 
     A veces volvemos muy pronto al hotel. Nos gusta mucho escuchar música o leer un buen libro.`
+  },
+  {
+    title: "Descripcion de mi mama Lauriana",
+    text: `Mi personaje favorito es mi mamá, su nombre es Lauriana de Jesús Pinta.
+    Tiene cuar$ y ocho añ$ de ed$ y tra$ de prof$ en el cen$ educativo “Fiscal Francia” de ni$ .
+    Ella vi$ en Calvas c$ mi pa$ y mi her$ , a qui$ quiero y apr$ mucho.
+    A mi madre la adm$ porque e$ una per$ luchadora, respe$, solidaria, soci$ , etc.
+    Le gu$ el dep$ , en espe$ el basqu$ .
+    Está siempre ale$ , es m$ amorosa y comuni$ , y trata de darme y enseñarme lo mejor que tiene.
+    Los momentos que he compartido con ella han sido inolvidables. `
   },
   {
     title: "Así es el día a día de una cantante famosa",

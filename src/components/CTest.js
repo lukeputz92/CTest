@@ -8,6 +8,7 @@ class CTest extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
+    this.state = { submitted: "" }
   }
   
   handleChange(task) {
@@ -26,7 +27,8 @@ class CTest extends React.Component {
     event.preventDefault();
     const data = { data: JSON.stringify(store.getState()) };
     emailjs.send('gmail', 'ctest', data, process.env.REACT_APP_EMAILJS_API_KEY).then((result) => {
-        console.log(result.text);
+        alert("Submitted!");
+        this.setState({submitted: "y"});
     }, (error) => {
         console.log(error.text);
     });
@@ -46,7 +48,13 @@ class CTest extends React.Component {
       <div className="ui container" style={{marginTop: "10px"}}>
         <Box>
         {tasks}
-        <Button variant="contained" color="primary" type="submit" onClick={this.onSubmit} style={{marginTop: "10px"}}>
+        <Button 
+          variant="contained" 
+          color="primary" 
+          type="submit" 
+          onClick={this.onSubmit} 
+          style={{marginTop: "10px"}}
+          disabled={this.state.submitted === "y"}>
           Submit
         </Button>
         </Box>
