@@ -19,13 +19,11 @@ class CTest extends React.Component {
         answers: task.answers
       }
     })
-    console.log(store.getState())
   }
 
   onSubmit = (event) => {
     const { store } = this.props;
     event.preventDefault();
-    console.log(store.getState());
     const data = { data: JSON.stringify(store.getState()) };
     emailjs.send('gmail', 'ctest', data, process.env.REACT_APP_EMAILJS_API_KEY).then((result) => {
         console.log(result.text);

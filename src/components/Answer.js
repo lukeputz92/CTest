@@ -9,7 +9,6 @@ class Answer extends React.Component {
 
   handleChange(event) {
     const text = event.target.value;
-    //console.log(this.props.name, text);
     this.props.onChange(this.props.name, text);
   }
 
