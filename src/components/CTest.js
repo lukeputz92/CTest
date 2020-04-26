@@ -26,13 +26,22 @@ class CTest extends React.Component {
     const { store } = this.props;
     event.preventDefault();
     const data = { data: JSON.stringify(store.getState()) };
-    emailjs.send('gmail', 'ctest', data, process.env.REACT_APP_EMAILJS_API_KEY).then((result) => {
-        alert("Submitted!");
-        this.setState({submitted: "y"});
-    }, (error) => {
-        console.log(error.text);
-    });
+    if(this.handleValidation(store.getState())) {
+      emailjs.send('gmail', 'ctest', data, process.env.REACT_APP_EMAILJS_API_KEY).then((result) => {
+          alert("Submitted!");
+          this.setState({submitted: "y"});
+      }, (error) => {
+          console.log(error.text);
+      });
+    } else {
+      alert("Participant number is required.")
+    }
   };
+
+  handleValidation = (data) => {
+    let index = data.findIndex(task => task.title === "Participant Number");
+    return index !== -1 && data[index].answers.a1;
+  }
 
   render() {
     const tasks = this.props.tasks.map((task) => (
